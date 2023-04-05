@@ -143,7 +143,7 @@ public class NavMeshTargetQueue : MonoBehaviour
     void PrintUpdatedQueue()
     {
         string remaining = "Remaining Queue: ";
-        string reached = "Reached Queue: ";
+        string reached = "Last Reached: ";
         foreach (NavMeshTarget target in reachedTargets)
         {
             if (target.TargetObject != null)

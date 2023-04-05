@@ -7,15 +7,16 @@ Material:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: Vol_30_3_Roofs
+  m_Name: jj_wall
   m_Shader: {fileID: 45, guid: 0000000000000000f000000000000000, type: 0}
   m_ValidKeywords:
+  - _EMISSION
   - _NORMALMAP
   - _PARALLAXMAP
-  - _SMOOTHNESS_TEXTURE_ALBEDO_CHANNEL_A
   - _SPECGLOSSMAP
-  m_InvalidKeywords: []
-  m_LightmapFlags: 4
+  m_InvalidKeywords:
+  - _METALLICGLOSSMAP
+  m_LightmapFlags: 2
   m_EnableInstancingVariants: 0
   m_DoubleSidedGI: 0
   m_CustomRenderQueue: -1
@@ -25,7 +26,7 @@ Material:
     serializedVersion: 3
     m_TexEnvs:
     - _BumpMap:
-        m_Texture: {fileID: 2800000, guid: 27db48b727b8291479c50e33cd6e436c, type: 3}
+        m_Texture: {fileID: 2800000, guid: 8931af16587629c4187693a56cd9de54, type: 3}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - _DetailAlbedoMap:
@@ -41,11 +42,11 @@ Material:
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - _EmissionMap:
-        m_Texture: {fileID: 0}
+        m_Texture: {fileID: 2800000, guid: aa3e95facbcb2874ea5d0fa0ce8ab8f2, type: 3}
         m_Scale: {x: 0.1, y: 0.1}
         m_Offset: {x: 0, y: 0}
     - _MainTex:
-        m_Texture: {fileID: 2800000, guid: 323ac6b077a121b4d84019f2c25fd31e, type: 3}
+        m_Texture: {fileID: 2800000, guid: aa3e95facbcb2874ea5d0fa0ce8ab8f2, type: 3}
         m_Scale: {x: 0.1, y: 0.1}
         m_Offset: {x: 0, y: 0}
     - _MetallicGlossMap:
@@ -53,15 +54,15 @@ Material:
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - _OcclusionMap:
-        m_Texture: {fileID: 2800000, guid: c4dbeaa72f7890047aa4a3104e154956, type: 3}
+        m_Texture: {fileID: 2800000, guid: 2d369e16f5f84a04c83c22731a20390f, type: 3}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - _ParallaxMap:
-        m_Texture: {fileID: 2800000, guid: 172a7b97944b04d4c903775827573934, type: 3}
+        m_Texture: {fileID: 2800000, guid: 6d7c872c3a1aea8448fd8eb308df97f3, type: 3}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - _SpecGlossMap:
-        m_Texture: {fileID: 2800000, guid: 323ac6b077a121b4d84019f2c25fd31e, type: 3}
+        m_Texture: {fileID: 2800000, guid: aa3e95facbcb2874ea5d0fa0ce8ab8f2, type: 3}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     m_Ints: []
@@ -70,20 +71,20 @@ Material:
     - _Cutoff: 0.41
     - _DetailNormalMapScale: 1
     - _DstBlend: 0
-    - _GlossMapScale: 0.102
-    - _Glossiness: 0.75
+    - _GlossMapScale: 0.748
+    - _Glossiness: 0.623
     - _GlossyReflections: 1
-    - _Metallic: 0
+    - _Metallic: 0.443
     - _Mode: 0
     - _OcclusionStrength: 1
     - _Parallax: 0.08
-    - _SmoothnessTextureChannel: 1
+    - _SmoothnessTextureChannel: 0
     - _SpecularHighlights: 1
     - _SrcBlend: 1
     - _UVSec: 0
     - _ZWrite: 1
     m_Colors:
-    - _Color: {r: 1, g: 1, b: 1, a: 1}
-    - _EmissionColor: {r: 0, g: 0, b: 0, a: 1}
+    - _Color: {r: 0, g: 0, b: 0, a: 1}
+    - _EmissionColor: {r: 1, g: 0, b: 0, a: 1}
     - _SpecColor: {r: 0, g: 0, b: 0, a: 1}
   m_BuildTextureStacks: []

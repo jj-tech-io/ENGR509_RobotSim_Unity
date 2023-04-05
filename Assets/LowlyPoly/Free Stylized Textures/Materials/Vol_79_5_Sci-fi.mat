@@ -10,6 +10,7 @@ Material:
   m_Name: Vol_79_5_Sci-fi
   m_Shader: {fileID: 45, guid: 0000000000000000f000000000000000, type: 0}
   m_ValidKeywords:
+  - _ALPHAPREMULTIPLY_ON
   - _NORMALMAP
   - _PARALLAXMAP
   - _SMOOTHNESS_TEXTURE_ALBEDO_CHANNEL_A
@@ -19,8 +20,9 @@ Material:
   m_LightmapFlags: 4
   m_EnableInstancingVariants: 0
   m_DoubleSidedGI: 0
-  m_CustomRenderQueue: -1
-  stringTagMap: {}
+  m_CustomRenderQueue: 3000
+  stringTagMap:
+    RenderType: Transparent
   disabledShaderPasses: []
   m_SavedProperties:
     serializedVersion: 3
@@ -70,19 +72,19 @@ Material:
     - _BumpScale: 1
     - _Cutoff: 0.41
     - _DetailNormalMapScale: 1
-    - _DstBlend: 0
+    - _DstBlend: 10
     - _GlossMapScale: 0.155
     - _Glossiness: 0.75
     - _GlossyReflections: 1
     - _Metallic: 0
-    - _Mode: 0
+    - _Mode: 3
     - _OcclusionStrength: 0.66
     - _Parallax: 0.08
     - _SmoothnessTextureChannel: 1
     - _SpecularHighlights: 1
     - _SrcBlend: 1
     - _UVSec: 0
-    - _ZWrite: 1
+    - _ZWrite: 0
     m_Colors:
     - _Color: {r: 1, g: 1, b: 1, a: 1}
     - _EmissionColor: {r: 0.7607844, g: 0.7607844, b: 0.7607844, a: 1}

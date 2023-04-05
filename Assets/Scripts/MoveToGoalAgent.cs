@@ -28,7 +28,7 @@ public class MoveToGoalAgent : Agent
     }
     public override void OnActionReceived(ActionBuffers actionBuffers)
     {
-        float moveSpeed = 10f;
+        float moveSpeed = 5f;
         float moveX = actionBuffers.ContinuousActions[0];
         float moveZ = actionBuffers.ContinuousActions[1];
         //zero
@@ -43,24 +43,45 @@ public class MoveToGoalAgent : Agent
             SetReward(1.5f);
             float cumulativeReward = GetCumulativeReward();
             totalReward += cumulativeReward;
-            // Debug.Log("Goal" + goal.name + "was reached" + "Reward: " + totalReward);
-            string message = "Goal" + goal.name + "was reached" + "Reward: " + totalReward;
+            string message = "";
+            if (totalReward > 10f)
+            {
+                totalReward = 0.0f;
+                floorMeshRenderer.material = winMaterial;
+                
+                EndEpisode();
+            }
+            else
+            {
+                message = goal.name + "was reached" + "Reward: " + totalReward;
+                
+                
+            }
             PrintScreenMessage(message);
-            floorMeshRenderer.material = winMaterial;
-            EndEpisode();
+              
             
         }
         //wall
         if (other.TryGetComponent<Wall>(out Wall wall))
         {
-            SetReward(-0.2f);
+            SetReward(-1f);
             float cumulativeReward = GetCumulativeReward();
             totalReward += cumulativeReward;
             // Debug.Log("Wall" + wall.name + "was hit" + "Reward: " + totalReward);
-            string message = "Wall" + wall.name + "was hit" + "Reward: " + totalReward;
+            string message = "";
             PrintScreenMessage(message);
-            floorMeshRenderer.material = loseMaterial;
-            EndEpisode();
+            // floorMeshRenderer.material = loseMaterial;
+            if (totalReward < -10f)
+            {
+                message = "Lost Episode";
+                EndEpisode();
+            }
+            else
+            {
+                message = wall.name + "was hit" + "Reward: " + totalReward;
+            }
+            transform.localPosition = new Vector3(Random.Range(-1f, 1f), 0.5f, Random.Range(-1f, 1f));
+            PrintScreenMessage(message);    
             
         }
     }
